@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\CourseApp.Application\CourseApp.Application.csproj" />
+    <ProjectReference Include="..\CourseApp.Domain\CourseApp.Domain.csproj" />
+    <ProjectReference Include="..\CourseApp.Shared\CourseApp.Shared.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

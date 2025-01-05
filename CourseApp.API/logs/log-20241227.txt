@@ -1,0 +1,924 @@
+2024-12-27 00:55:24.511 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 00:55:24.802 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 00:55:24.991 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 00:55:24.993 +03:00 [INF] Hosting environment: Development
+2024-12-27 00:55:24.994 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 00:55:26.542 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger - null null
+2024-12-27 00:55:27.278 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger - 301 0 null 744.4476ms
+2024-12-27 00:55:27.284 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 00:55:27.370 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 86.5246ms
+2024-12-27 00:55:27.374 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui.css - null null
+2024-12-27 00:55:27.374 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-27 00:55:27.374 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui-bundle.js - null null
+2024-12-27 00:55:27.374 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 00:55:27.387 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 13.1105ms
+2024-12-27 00:55:27.390 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 00:55:27.438 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-27 00:55:27.438 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-27 00:55:27.441 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 67.0329ms
+2024-12-27 00:55:27.441 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui.css - 200 152034 text/css 67.2857ms
+2024-12-27 00:55:27.451 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.3397ms
+2024-12-27 00:55:27.459 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-27 00:55:27.460 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 85.9203ms
+2024-12-27 00:55:27.682 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2024-12-27 00:55:27.693 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.7612ms
+2024-12-27 00:56:13.968 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/login - application/json 47
+2024-12-27 00:56:13.991 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-27 00:56:13.998 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 00:56:14.023 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CourseApp.Application.DTOs.UserLoginDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 00:56:14.941 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Course'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 00:56:14.943 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 00:56:16.184 +03:00 [INF] Executed DbCommand (98ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 00:56:16.369 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 00:56:16.380 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Login (CourseApp.API) in 2353.2804ms
+2024-12-27 00:56:16.382 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 00:56:16.389 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/login - 200 null application/json; charset=utf-8 2421.1172ms
+2024-12-27 00:56:39.377 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/api/User/1 - null null
+2024-12-27 00:56:39.388 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.GetById (CourseApp.API)'
+2024-12-27 00:56:39.395 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 00:56:39.448 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-12-27 00:56:39.450 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.UserDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 00:56:39.452 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.GetById (CourseApp.API) in 53.3653ms
+2024-12-27 00:56:39.453 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.GetById (CourseApp.API)'
+2024-12-27 00:56:39.454 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/api/User/1 - 200 null application/json; charset=utf-8 80.5948ms
+2024-12-27 00:56:49.278 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5192/api/User/2 - null null
+2024-12-27 00:56:49.281 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Delete (CourseApp.API)'
+2024-12-27 00:56:49.285 +03:00 [INF] Route matched with {action = "Delete", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 00:56:49.341 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-12-27 00:56:49.433 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Users]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-12-27 00:56:49.447 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-27 00:56:49.451 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Delete (CourseApp.API) in 164.2099ms
+2024-12-27 00:56:49.453 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Delete (CourseApp.API)'
+2024-12-27 00:56:49.454 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5192/api/User/2 - 200 null application/json; charset=utf-8 175.9624ms
+2024-12-27 00:57:00.402 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5192/api/User/1 - application/json 49
+2024-12-27 00:57:00.406 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Update (CourseApp.API)'
+2024-12-27 00:57:00.410 +03:00 [INF] Route matched with {action = "Update", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, CourseApp.Application.DTOs.UserUpdateDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 00:57:00.425 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-12-27 00:57:00.441 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [FullName] = @p1, [PasswordHash] = @p2, [Role] = @p3, [Title] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2024-12-27 00:57:00.444 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.UserDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 00:57:00.445 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Update (CourseApp.API) in 29.9367ms
+2024-12-27 00:57:00.445 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Update (CourseApp.API)'
+2024-12-27 00:57:00.446 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5192/api/User/1 - 200 null application/json; charset=utf-8 43.7338ms
+2024-12-27 00:57:06.258 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/api/User/1 - null null
+2024-12-27 00:57:06.262 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.GetById (CourseApp.API)'
+2024-12-27 00:57:06.264 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 00:57:06.269 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-12-27 00:57:06.270 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.UserDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 00:57:06.271 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.GetById (CourseApp.API) in 6.1436ms
+2024-12-27 00:57:06.272 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.GetById (CourseApp.API)'
+2024-12-27 00:57:06.273 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/api/User/1 - 200 null application/json; charset=utf-8 15.1329ms
+2024-12-27 00:57:15.425 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/api/Course/all - null null
+2024-12-27 00:57:15.428 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.CourseController.GetAllCourses (CourseApp.API)'
+2024-12-27 00:57:15.431 +03:00 [INF] Route matched with {action = "GetAllCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCourses() on controller CourseApp.API.Controllers.CourseController (CourseApp.API).
+2024-12-27 00:57:15.545 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Category], [c].[Description], [c].[Name], [c].[Price]
+FROM [Courses] AS [c]
+2024-12-27 00:57:15.558 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[System.Collections.Generic.IEnumerable`1[[CourseApp.Application.DTOs.CourseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-27 00:57:15.562 +03:00 [INF] Executed action CourseApp.API.Controllers.CourseController.GetAllCourses (CourseApp.API) in 129.9151ms
+2024-12-27 00:57:15.563 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.CourseController.GetAllCourses (CourseApp.API)'
+2024-12-27 00:57:15.565 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/api/Course/all - 200 null application/json; charset=utf-8 139.4149ms
+2024-12-27 00:59:07.806 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/register - application/json 92
+2024-12-27 00:59:07.814 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Register (CourseApp.API)'
+2024-12-27 00:59:07.817 +03:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(CourseApp.Application.DTOs.UserRegisterDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 00:59:07.836 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 00:59:07.839 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 00:59:07.840 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Register (CourseApp.API) in 20.441ms
+2024-12-27 00:59:07.841 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Register (CourseApp.API)'
+2024-12-27 00:59:07.841 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/register - 400 null application/json; charset=utf-8 36.2895ms
+2024-12-27 01:04:22.818 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:04:22.984 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:04:23.054 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:04:23.056 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:04:23.057 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:04:23.561 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:04:23.791 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 236.7142ms
+2024-12-27 01:04:23.796 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 01:04:23.800 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 4.3246ms
+2024-12-27 01:04:23.809 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 01:04:23.837 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.7308ms
+2024-12-27 01:04:24.061 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2024-12-27 01:04:24.077 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.9465ms
+2024-12-27 01:04:28.375 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/login - application/json 47
+2024-12-27 01:04:28.387 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-27 01:04:28.392 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:04:28.414 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CourseApp.Application.DTOs.UserLoginDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 01:04:28.975 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Course'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:04:28.976 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:04:29.582 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 01:04:29.737 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 01:04:29.756 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Login (CourseApp.API) in 1329.2461ms
+2024-12-27 01:04:29.782 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:04:29.796 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/login - 200 null application/json; charset=utf-8 1421.2471ms
+2024-12-27 01:05:33.771 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/login - application/json 50
+2024-12-27 01:05:33.818 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:05:33.848 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:05:33.849 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:05:33.850 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CourseApp.Application.DTOs.UserLoginDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 01:05:33.878 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 01:05:33.945 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 01:05:33.946 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Login (CourseApp.API) in 95.1267ms
+2024-12-27 01:05:33.947 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:05:33.948 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/login - 200 null application/json; charset=utf-8 176.9623ms
+2024-12-27 01:06:01.371 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:06:01.383 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:06:01.386 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:06:01.387 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 15.7248ms
+2024-12-27 01:06:21.045 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:06:21.048 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:06:21.050 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:06:21.052 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:06:21.054 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:06:21.055 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 9.245ms
+2024-12-27 01:06:42.704 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:06:42.743 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:06:42.746 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:06:42.748 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:06:42.748 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:06:42.749 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 45.3537ms
+2024-12-27 01:06:47.680 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:06:47.683 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:06:47.683 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:06:47.684 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 3.8249ms
+2024-12-27 01:07:56.619 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:07:56.795 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:07:56.870 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:07:56.871 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:07:56.872 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:07:57.239 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:07:57.437 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 206.5061ms
+2024-12-27 01:07:57.444 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 01:07:57.449 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 5.3143ms
+2024-12-27 01:07:57.454 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 01:07:57.481 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.6743ms
+2024-12-27 01:07:57.630 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2024-12-27 01:07:57.655 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.7288ms
+2024-12-27 01:08:01.120 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:08:01.129 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-27 01:08:01.133 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.CourseController.AddCourse (CourseApp.API)'
+2024-12-27 01:08:01.157 +03:00 [INF] Route matched with {action = "AddCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCourse(CourseApp.Application.DTOs.CourseCreateDto) on controller CourseApp.API.Controllers.CourseController (CourseApp.API).
+2024-12-27 01:08:07.752 +03:00 [INF] Executed action CourseApp.API.Controllers.CourseController.AddCourse (CourseApp.API) in 6590.7844ms
+2024-12-27 01:08:07.755 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.CourseController.AddCourse (CourseApp.API)'
+2024-12-27 01:16:54.259 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:16:54.417 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:16:54.487 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:16:54.489 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:16:54.489 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:16:55.019 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:17:09.373 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__2(JwtBearerOptions options) in D:\Projects\Deneme3\CourseApp\CourseApp.API\Program.cs:line 32
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c.<Get>b__10_0(String name, IOptionsFactory`1 factory)
+   at Microsoft.Extensions.Options.OptionsCache`1.<>c__DisplayClass3_1`1.<GetOrAdd>b__2()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-27 01:17:09.470 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 500 null text/html; charset=utf-8 14458.2777ms
+2024-12-27 01:17:09.484 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 01:17:09.486 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 01:17:09.492 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 5.3259ms
+2024-12-27 01:17:09.515 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.0143ms
+2024-12-27 01:17:09.659 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/favicon.ico - null null
+2024-12-27 01:17:09.664 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__2(JwtBearerOptions options) in D:\Projects\Deneme3\CourseApp\CourseApp.API\Program.cs:line 32
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c.<Get>b__10_0(String name, IOptionsFactory`1 factory)
+   at Microsoft.Extensions.Options.OptionsCache`1.<>c__DisplayClass3_1`1.<GetOrAdd>b__2()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-27 01:17:09.673 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/favicon.ico - 500 null text/plain; charset=utf-8 13.4771ms
+2024-12-27 01:17:37.787 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:17:37.969 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:17:38.074 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:17:38.075 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:17:38.076 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:17:38.239 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:19:17.824 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:19:17.991 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:19:18.071 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:19:18.072 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:19:18.073 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:19:18.588 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:19:18.815 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 236.2395ms
+2024-12-27 01:19:18.840 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 01:19:18.840 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 01:19:18.845 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 5.5862ms
+2024-12-27 01:19:18.881 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.0567ms
+2024-12-27 01:19:19.029 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2024-12-27 01:19:19.040 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.1947ms
+2024-12-27 01:19:23.972 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/login - application/json 47
+2024-12-27 01:19:23.984 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-27 01:19:23.987 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:19:24.011 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CourseApp.Application.DTOs.UserLoginDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 01:19:24.648 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Course'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:19:24.649 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:19:25.270 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 01:19:25.458 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 01:19:25.467 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Login (CourseApp.API) in 1452.5661ms
+2024-12-27 01:19:25.469 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:19:25.476 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/login - 200 null application/json; charset=utf-8 1503.4471ms
+2024-12-27 01:19:39.951 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:19:39.968 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:19:39.985 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:19:39.990 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:19:39.994 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:19:39.995 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 43.615ms
+2024-12-27 01:23:08.796 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:23:08.953 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:23:09.022 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:23:09.025 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:23:09.025 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:23:09.217 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:23:09.418 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 208.1264ms
+2024-12-27 01:23:09.425 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 01:23:09.429 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 4.9882ms
+2024-12-27 01:23:09.436 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 01:23:09.463 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.6206ms
+2024-12-27 01:23:09.599 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2024-12-27 01:23:09.610 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.0142ms
+2024-12-27 01:23:14.746 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/login - application/json 47
+2024-12-27 01:23:14.757 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-27 01:23:14.761 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:23:14.782 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CourseApp.Application.DTOs.UserLoginDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 01:23:15.342 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Course'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:23:15.343 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:23:16.010 +03:00 [INF] Executed DbCommand (54ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 01:23:16.207 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 01:23:16.220 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Login (CourseApp.API) in 1432.1725ms
+2024-12-27 01:23:16.221 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:23:16.231 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/login - 200 null application/json; charset=utf-8 1484.5567ms
+2024-12-27 01:23:59.421 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:23:59.435 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:23:59.450 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:23:59.455 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:23:59.459 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:23:59.460 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 38.5168ms
+2024-12-27 01:24:02.992 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:24:02.996 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:24:02.998 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:24:03.000 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:24:03.001 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:24:03.002 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 9.2459ms
+2024-12-27 01:24:03.846 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:24:03.852 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:24:03.855 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:24:03.856 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:24:03.857 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:24:03.858 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 12.7673ms
+2024-12-27 01:24:04.560 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:24:04.563 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:24:04.565 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:24:04.566 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:24:04.567 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:24:04.568 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 7.9486ms
+2024-12-27 01:24:14.020 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:24:14.025 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:24:14.027 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:24:14.027 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:24:14.028 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:24:14.029 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 8.7271ms
+2024-12-27 01:24:24.150 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:24:24.153 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:24:24.155 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:24:24.156 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:24:24.156 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:24:24.157 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 6.7523ms
+2024-12-27 01:24:30.108 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:24:30.114 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:24:30.119 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:24:30.120 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:24:30.121 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:24:30.123 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 14.9079ms
+2024-12-27 01:24:35.815 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:24:35.818 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:24:35.820 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:24:35.820 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:24:35.821 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:24:35.821 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 6.4408ms
+2024-12-27 01:24:55.369 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:24:55.372 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:24:55.374 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:24:55.374 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:24:55.375 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:24:55.376 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 7.0036ms
+2024-12-27 01:25:52.167 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:25:52.353 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:25:52.434 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:25:52.435 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:25:52.436 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:25:52.698 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:25:52.863 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 185.5838ms
+2024-12-27 01:25:52.920 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 01:25:52.920 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 01:25:52.924 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 4.3077ms
+2024-12-27 01:25:52.954 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.0084ms
+2024-12-27 01:25:53.085 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2024-12-27 01:25:53.094 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.6016ms
+2024-12-27 01:26:04.418 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/login - application/json 47
+2024-12-27 01:26:04.426 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-27 01:26:04.474 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:26:04.495 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CourseApp.Application.DTOs.UserLoginDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 01:26:05.078 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Course'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:26:05.079 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:26:05.708 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 01:26:05.870 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 01:26:05.880 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Login (CourseApp.API) in 1379.2067ms
+2024-12-27 01:26:05.882 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:26:05.889 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/login - 200 null application/json; charset=utf-8 1471.7323ms
+2024-12-27 01:26:29.145 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:26:29.162 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:26:29.179 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:26:29.184 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:26:29.188 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:26:29.190 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 45.4925ms
+2024-12-27 01:26:33.931 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:26:33.948 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:26:33.953 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:26:33.957 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:26:33.960 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:26:33.962 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 31.1255ms
+2024-12-27 01:26:39.857 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:26:39.860 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:26:39.863 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:26:39.865 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:26:39.866 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:26:39.867 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 9.6056ms
+2024-12-27 01:26:44.730 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:26:44.741 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:26:44.746 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:26:44.749 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:26:44.751 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:26:44.753 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 23.4065ms
+2024-12-27 01:26:51.162 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:26:51.165 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:26:51.167 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:26:51.168 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:26:51.168 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:26:51.169 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 7.5606ms
+2024-12-27 01:27:03.267 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:27:03.269 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:27:03.271 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:27:03.272 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:27:03.273 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:27:03.275 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 8.275ms
+2024-12-27 01:32:52.120 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:32:52.300 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:32:52.385 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:32:52.387 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:32:52.389 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:32:52.985 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:32:53.142 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 163.8999ms
+2024-12-27 01:32:53.145 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.js - null null
+2024-12-27 01:32:53.147 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.css - null null
+2024-12-27 01:32:53.150 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.js - 200 null application/javascript;charset=utf-8 6.1121ms
+2024-12-27 01:32:53.157 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 01:32:53.161 +03:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-12-27 01:32:53.162 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.css - 200 202 text/css 15.2629ms
+2024-12-27 01:32:53.171 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 01:32:53.179 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 8.4348ms
+2024-12-27 01:32:53.203 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.1629ms
+2024-12-27 01:32:53.339 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2024-12-27 01:32:53.349 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.0368ms
+2024-12-27 01:33:06.775 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/login - application/json 47
+2024-12-27 01:33:06.783 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-27 01:33:06.833 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:33:06.851 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CourseApp.Application.DTOs.UserLoginDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 01:33:07.404 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Course'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:33:07.405 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:33:08.030 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 01:33:08.208 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 01:33:08.220 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Login (CourseApp.API) in 1365.1319ms
+2024-12-27 01:33:08.222 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:33:08.230 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/login - 200 null application/json; charset=utf-8 1454.4076ms
+2024-12-27 01:33:27.742 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:33:27.750 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:33:27.755 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:33:27.756 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 13.9395ms
+2024-12-27 01:33:29.883 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:33:29.888 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:33:29.889 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:33:29.890 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 7.0519ms
+2024-12-27 01:33:30.445 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:33:30.448 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:33:30.449 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:33:30.450 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 5.2805ms
+2024-12-27 01:33:30.884 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:33:30.888 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:33:30.889 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:33:30.890 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 6.2584ms
+2024-12-27 01:33:31.043 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:33:31.046 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:33:31.047 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:33:31.048 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 5.2913ms
+2024-12-27 01:33:31.179 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:33:31.184 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:33:31.185 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:33:31.186 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 6.2226ms
+2024-12-27 01:33:31.746 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:33:31.749 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:33:31.751 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:33:31.752 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 5.9003ms
+2024-12-27 01:33:31.971 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:33:31.975 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:33:31.976 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:33:31.977 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 5.889ms
+2024-12-27 01:33:32.226 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:33:32.229 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Instructor)
+2024-12-27 01:33:32.230 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:33:32.231 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 5.1762ms
+2024-12-27 01:35:10.471 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:35:10.648 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:35:10.823 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:35:10.825 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:35:10.826 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:35:11.271 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:35:11.429 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 165.3932ms
+2024-12-27 01:35:11.434 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.js - null null
+2024-12-27 01:35:11.435 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 01:35:11.439 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.js - 200 null application/javascript;charset=utf-8 4.7316ms
+2024-12-27 01:35:11.442 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 7.7947ms
+2024-12-27 01:35:11.448 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 01:35:11.478 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.2529ms
+2024-12-27 01:35:11.620 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2024-12-27 01:35:11.631 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.348ms
+2024-12-27 01:35:16.945 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:35:16.952 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-27 01:35:16.996 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:35:16.999 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:35:17.000 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 55.284ms
+2024-12-27 01:35:26.632 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:35:26.638 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:35:26.639 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:35:26.639 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 7.3833ms
+2024-12-27 01:35:32.318 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/login - application/json 47
+2024-12-27 01:35:32.337 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:35:32.363 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:35:32.365 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:35:32.382 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CourseApp.Application.DTOs.UserLoginDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 01:35:32.929 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Course'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:35:32.930 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:35:33.505 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 01:35:33.664 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 01:35:33.675 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Login (CourseApp.API) in 1289.0205ms
+2024-12-27 01:35:33.677 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:35:33.684 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/login - 200 null application/json; charset=utf-8 1366.2159ms
+2024-12-27 01:35:45.913 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:35:45.920 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:35:45.924 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:35:45.927 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:35:45.931 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:35:45.933 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 19.986ms
+2024-12-27 01:35:52.242 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:35:52.251 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:35:52.255 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:35:52.257 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:35:52.259 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:35:52.260 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 17.7339ms
+2024-12-27 01:36:12.807 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 87
+2024-12-27 01:36:12.812 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:36:12.813 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:36:12.813 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 6.5897ms
+2024-12-27 01:39:51.125 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:39:51.310 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:39:51.385 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:39:51.387 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:39:51.387 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:39:51.675 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:39:51.836 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 167.6562ms
+2024-12-27 01:39:51.843 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.js - null null
+2024-12-27 01:39:51.845 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 01:39:51.848 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.js - 200 null application/javascript;charset=utf-8 5.8134ms
+2024-12-27 01:39:51.852 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 6.5134ms
+2024-12-27 01:39:51.856 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 01:39:51.897 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.0174ms
+2024-12-27 01:39:52.047 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2024-12-27 01:39:52.059 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.2625ms
+2024-12-27 01:39:56.559 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/login - application/json 47
+2024-12-27 01:39:56.567 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-27 01:39:56.612 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:39:56.631 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CourseApp.Application.DTOs.UserLoginDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 01:39:57.184 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Course'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:39:57.186 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:39:57.819 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 01:39:57.977 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 01:39:57.988 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Login (CourseApp.API) in 1352.1001ms
+2024-12-27 01:39:57.989 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:39:57.996 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/login - 200 null application/json; charset=utf-8 1437.1476ms
+2024-12-27 01:40:09.939 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:40:09.951 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:40:09.969 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:40:09.975 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:40:09.981 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:40:09.982 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 43.4092ms
+2024-12-27 01:40:14.514 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:40:14.521 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:40:14.524 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:40:14.526 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:40:14.528 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:40:14.529 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 14.6844ms
+2024-12-27 01:40:22.733 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:40:22.735 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:40:22.738 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:40:22.740 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:40:22.740 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:40:22.741 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 8.2129ms
+2024-12-27 01:40:29.556 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:40:29.558 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:40:29.561 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:40:29.562 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:40:29.563 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:40:29.563 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 7.7368ms
+2024-12-27 01:42:45.446 +03:00 [INF] User profile is available. Using 'C:\Users\Samet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-27 01:42:45.606 +03:00 [INF] Now listening on: http://localhost:5192
+2024-12-27 01:42:45.679 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-27 01:42:45.681 +03:00 [INF] Hosting environment: Development
+2024-12-27 01:42:45.682 +03:00 [INF] Content root path: D:\Projects\Deneme3\CourseApp\CourseApp.API
+2024-12-27 01:42:46.003 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2024-12-27 01:42:46.176 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 182.7837ms
+2024-12-27 01:42:46.181 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.js - null null
+2024-12-27 01:42:46.181 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-27 01:42:46.185 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.js - 200 null application/javascript;charset=utf-8 5.2168ms
+2024-12-27 01:42:46.189 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 7.8877ms
+2024-12-27 01:42:46.196 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2024-12-27 01:42:46.231 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.6496ms
+2024-12-27 01:42:46.369 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2024-12-27 01:42:46.379 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.6172ms
+2024-12-27 01:42:50.520 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/User/login - application/json 47
+2024-12-27 01:42:50.528 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-12-27 01:42:50.568 +03:00 [INF] Executing endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:42:50.586 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CourseApp.Application.DTOs.UserLoginDto) on controller CourseApp.API.Controllers.UserController (CourseApp.API).
+2024-12-27 01:42:51.137 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Course'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:42:51.139 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-12-27 01:42:51.770 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__email_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[FullName], [u].[PasswordHash], [u].[Role], [u].[Title]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-12-27 01:42:51.941 +03:00 [INF] Executing OkObjectResult, writing value of type 'CourseApp.Shared.Responses.BaseResponse`1[[CourseApp.Application.DTOs.Response.AuthResponseDto, CourseApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-27 01:42:51.952 +03:00 [INF] Executed action CourseApp.API.Controllers.UserController.Login (CourseApp.API) in 1361.0826ms
+2024-12-27 01:42:51.954 +03:00 [INF] Executed endpoint 'CourseApp.API.Controllers.UserController.Login (CourseApp.API)'
+2024-12-27 01:42:51.961 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/User/login - 200 null application/json; charset=utf-8 1440.2359ms
+2024-12-27 01:43:10.559 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 92
+2024-12-27 01:43:10.578 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:43:10.597 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:43:10.602 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:43:10.607 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:43:10.608 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 50.0287ms
+2024-12-27 01:43:17.033 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 93
+2024-12-27 01:43:17.036 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:43:17.038 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:43:17.040 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:43:17.041 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:43:17.042 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 9.3383ms
+2024-12-27 01:43:25.728 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5192/api/Course/add - application/json 93
+2024-12-27 01:43:25.731 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-12-27 01:43:25.733 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-27 01:43:25.735 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-27 01:43:25.737 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-27 01:43:25.737 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5192/api/Course/add - 401 0 null 9.0485ms

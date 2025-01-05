@@ -1,0 +1,12 @@
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\bin\Debug\net8.0\CourseApp.Shared.deps.json
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\bin\Debug\net8.0\CourseApp.Shared.dll
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\bin\Debug\net8.0\CourseApp.Shared.pdb
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\obj\Debug\net8.0\CourseApp.Shared.csproj.AssemblyReference.cache
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\obj\Debug\net8.0\CourseApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\obj\Debug\net8.0\CourseApp.Shared.AssemblyInfoInputs.cache
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\obj\Debug\net8.0\CourseApp.Shared.AssemblyInfo.cs
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\obj\Debug\net8.0\CourseApp.Shared.csproj.CoreCompileInputs.cache
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\obj\Debug\net8.0\CourseApp.Shared.dll
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\obj\Debug\net8.0\refint\CourseApp.Shared.dll
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\obj\Debug\net8.0\CourseApp.Shared.pdb
+D:\Projects\Deneme3\CourseApp\CourseApp.Shared\obj\Debug\net8.0\ref\CourseApp.Shared.dll

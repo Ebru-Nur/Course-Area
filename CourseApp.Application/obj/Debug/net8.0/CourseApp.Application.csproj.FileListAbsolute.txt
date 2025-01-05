@@ -1,0 +1,17 @@
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\bin\Debug\net8.0\CourseApp.Application.deps.json
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\bin\Debug\net8.0\CourseApp.Application.dll
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\bin\Debug\net8.0\CourseApp.Application.pdb
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\bin\Debug\net8.0\CourseApp.Domain.dll
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\bin\Debug\net8.0\CourseApp.Shared.dll
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\bin\Debug\net8.0\CourseApp.Domain.pdb
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\bin\Debug\net8.0\CourseApp.Shared.pdb
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\obj\Debug\net8.0\CourseApp.Application.csproj.AssemblyReference.cache
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\obj\Debug\net8.0\CourseApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\obj\Debug\net8.0\CourseApp.Application.AssemblyInfoInputs.cache
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\obj\Debug\net8.0\CourseApp.Application.AssemblyInfo.cs
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\obj\Debug\net8.0\CourseApp.Application.csproj.CoreCompileInputs.cache
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\obj\Debug\net8.0\CourseAp.590514DB.Up2Date
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\obj\Debug\net8.0\CourseApp.Application.dll
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\obj\Debug\net8.0\refint\CourseApp.Application.dll
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\obj\Debug\net8.0\CourseApp.Application.pdb
+D:\Projects\Deneme3\CourseApp\CourseApp.Application\obj\Debug\net8.0\ref\CourseApp.Application.dll
